@@ -1,0 +1,16 @@
+<a href="https://coryrylan.com/blog/building-reusable-forms-in-angular"><h1>Building Reusable Forms in Angular</h1></a>
+
+<form [formGroup]="signupForm" (ngSubmit)="submit()">
+  <app-profile-form formControlName="profile"></app-profile-form>
+  <app-password-form formControlName="password"></app-password-form>
+  <button>Sign Up</button>
+  <button type="button" (click)="resetForm()">Reset</button>
+</form>
+
+<p>
+  Form is {{signupForm.valid ? 'Valid' : 'Invalid'}}
+</p>
+
+<pre>
+{{signupForm.value | json}}
+</pre>

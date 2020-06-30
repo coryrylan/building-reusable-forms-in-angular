@@ -1,0 +1,143 @@
+body {
+  font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5rem;
+  color: #2d2d2d;
+  padding: 24px;
+  margin: 0;
+  --container-width: 1024px;
+  --border-color: #ccc;
+  --success-color: green;
+  --error-color: red;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+label, input {
+  display: block;
+}
+
+label, .label {
+  font-size: 18px;
+  margin-bottom: .5rem;
+  display: block;
+}
+
+label {
+  cursor: pointer;
+}
+
+input, select, textarea {
+  margin-bottom: 2rem;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  min-width: 185px;
+  background: linear-gradient(to bottom,#f4f4f4 0,#fff 12%);
+}
+
+input[type="color"] {
+  padding: 2px;
+  min-height: 30px;
+}
+
+input[type="checkbox"], input[type="checkbox"] + label,
+input[type="radio"], input[type="radio"] + label {
+  display: inline-block;
+  min-width: auto;
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+  margin-bottom: 24px;
+}
+
+.checkbox-list {
+  input[type="checkbox"] {
+    margin-bottom: 8px;
+  }
+}
+
+input[type="radio"] {
+  margin-bottom: 18px;
+}
+
+fieldset {
+  padding: 12px;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 16px;
+  display: block;
+}
+
+fieldset {
+  margin-bottom: 24px;
+  border: 1px solid var(--border-color);
+}
+
+.error {
+  color: var(--error-color);
+  margin-top: -24px;
+  margin-bottom: 24px;
+}
+
+.info {
+  margin-top: -24px;
+  margin-bottom: 24px;
+}
+
+[aria-hidden='true'] {
+  display: none;
+}
+
+[aria-invalid='true'] {
+  border: 1px solid var(--error-color);
+}
+
+.status-error, .status-pending, .status-success {
+  margin: 24px 0;
+  border: 2px solid black;
+  padding: 12px;
+}
+
+.status-error {
+  border-color: var(--error-color);
+  color: var(--error-color);
+}
+
+.status-error button {
+  display: block;
+  border: 0;
+  color: var(--error-color);
+  text-decoration: underline;
+  cursor: pointer;
+  padding: 12px;
+  font-size: 16px;
+}
+
+.status-pending {
+  border-color: orange;
+  color: black;
+}
+
+.status-success {
+  border-color: var(--success-color);
+  color: var(--success-color);
+}
